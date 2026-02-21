@@ -1,0 +1,52 @@
+{
+  "type": "scalar.function",
+  "input_schema": {
+    "type": "image",
+    "description": "A picture of a cat to evaluate for composition and visual clarity."
+  },
+  "tasks": [
+    {
+      "type": "placeholder.scalar.function",
+      "input_schema": {
+        "type": "image",
+        "description": "A cat photograph to evaluate for subject clarity — whether the cat is in focus, visually distinct, and immediately recognizable as the center of the image."
+      },
+      "skip": null,
+      "input": {
+        "$jmespath": "input"
+      },
+      "output": {
+        "$jmespath": "output"
+      }
+    },
+    {
+      "type": "placeholder.scalar.function",
+      "input_schema": {
+        "type": "image",
+        "description": "A cat photograph to evaluate for intentional framing — whether the composition feels deliberate and positions the cat as the natural focal point of the image."
+      },
+      "skip": null,
+      "input": {
+        "$jmespath": "input"
+      },
+      "output": {
+        "$jmespath": "output"
+      }
+    },
+    {
+      "type": "placeholder.scalar.function",
+      "input_schema": {
+        "type": "image",
+        "description": "A cat photograph to evaluate for light and environment — whether the lighting reveals the cat effectively and the background supports the subject without distraction."
+      },
+      "skip": null,
+      "input": {
+        "$jmespath": "input"
+      },
+      "output": {
+        "$jmespath": "output"
+      }
+    }
+  ],
+  "description": "Scores the composition and visual clarity of a cat photograph from 0 to 1. Evaluates subject clarity (is the cat in focus and visible), intentional framing (does the composition serve the cat as focal point), and light and environment (do lighting and background support the subject). Prioritizes visual intention over technical perfection."
+}
